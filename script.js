@@ -9,8 +9,8 @@ const searchBtn = document.getElementById('searchBtn');
 
 function submitSearch(event) {
     let city = searchInput = document.getElementById("searchInput").value;
-    let url = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + lim + app + apiKey
-    fetch(url)
+    let link = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + lim + app + apiKey
+    fetch(link)
   .then(response => response.json())
   .then(data => {
     console.log(data);
