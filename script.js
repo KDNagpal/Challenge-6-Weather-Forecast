@@ -1,8 +1,8 @@
 let apiKey = "bf55ceef668a886be7e962a4c553fd1f"
-let forcastApi = "http://api.openweathermap.org/data/2.5/forecast?lat="
+let forcastApi = "https://api.openweathermap.org/data/2.5/forecast?lat="
 let lon = ""
 let lat = ""
-let geoApi = 'http://api.openweathermap.org/geo/1.0/direct?q='
+let geoApi = 'https://api.openweathermap.org/geo/1.0/direct?q='
 let app ='&appid='
 let lim = '&limit=1'
 const searchBtn = document.getElementById('searchBtn');
@@ -41,7 +41,7 @@ function getCity(city) {
           .then(data => {
             console.log(data)
             var iconCode = data.list[0].weather[0].icon;
-            const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+            const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
             //city and state
             document.getElementById("city").innerHTML= ("City: " + data.city.name);
@@ -58,7 +58,7 @@ function getCity(city) {
             document.getElementById("wind").innerHTML = data.list[0].wind.speed;
             //day 2
             var iconCode = data.list[9].weather[0].icon;
-            const iconUrl2 = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+            const iconUrl2 = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
             document.querySelector("#date2").innerHTML = data.list[9].dt_txt;
             document.getElementById("weather-icon2").innerHTML = `<img src="${iconUrl2}" alt="Weather icon">`;
             document.getElementById("descript2").innerHTML = data.list[9].weather[0].description;
@@ -70,7 +70,7 @@ function getCity(city) {
             document.getElementById("wind2").innerHTML = data.list[9].wind.speed;
             //day 3
             var iconCode = data.list[18].weather[0].icon;
-            const iconUrl3 = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+            const iconUrl3 = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
             document.querySelector("#date3").innerHTML = data.list[18].dt_txt;
             document.getElementById("weather-icon3").innerHTML = `<img src="${iconUrl3}" alt="Weather icon">`;
             document.getElementById("descript3").innerHTML = data.list[18].weather[0].description;
@@ -82,7 +82,7 @@ function getCity(city) {
             document.getElementById("wind3").innerHTML = data.list[18].wind.speed;
             //day 4
             var iconCode = data.list[27].weather[0].icon;
-            const iconUrl4 = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+            const iconUrl4 = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
             document.querySelector("#date4").innerHTML = data.list[27].dt_txt;
             document.getElementById("weather-icon4").innerHTML = `<img src="${iconUrl4}" alt="Weather icon">`;
             document.getElementById("descript4").innerHTML = data.list[27].weather[0].description;
@@ -94,7 +94,7 @@ function getCity(city) {
             document.getElementById("wind4").innerHTML = data.list[27].wind.speed;
             //day 5
             var iconCode = data.list[36].weather[0].icon;
-            const iconUrl5 = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+            const iconUrl5 = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
             document.querySelector("#date5").innerHTML = data.list[36].dt_txt;
             document.getElementById("weather-icon5").innerHTML = `<img src="${iconUrl5}" alt="Weather icon">`;
             document.getElementById("descript5").innerHTML = data.list[36].weather[0].description;
@@ -135,3 +135,8 @@ window.addEventListener("load", function() {
 
 
 searchBtn.addEventListener('click', submitSearch);
+
+
+
+
+//local storage stuff
