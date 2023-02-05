@@ -9,20 +9,20 @@
     <title>5 Day Forcast</title>
 </head>
 <body>
-    <div class="columns m-4 p-4 is-centered">
+    <div class="columns m-4 p-4 is-centered searchbox">
         <div class="column is-half">
-            <input id="searchInput" class="input is-rounded searchbar is-large" type="text" placeholder="Enter City Name Here.....">
+            <input id="searchInput" class="input is-rounded searchbar is-large" type="text" placeholder="Enter City Name Here....." >
             <button id="searchBtn" type="button" class="button is-white is-medium m-4 p-4">Search</button>
         </div>
     </div>
-    <div class="columns m-4 p-4 is-centered">
+    <div class="columns daybox m-4 p-4 is-centered">
         <div class="column is-half is-centered">
             <h1 id="city"></h1>
             <strong>Today is:</strong><p id="currentDay"></p >
         </div>
     </div>
-    <div class="columns m-4 p-4">
-        <div class="column is-one-fifth">
+    <div class="columns m-0 p-1">
+        <div class="column wbox m-1 p-4">
             <p>Date: <span id="date"></span></p>
             <p> <span id="weather-icon"></span></p>
             <p>Looks Like:&nbsp;<span id="descript"></span></p>
@@ -33,7 +33,7 @@
             <p>Temperature Min: <span id="temp-min"></span>F</p>
             <p>Wind Speed: <span id="wind"></span>&nbsp;MPH</p>
         </div>
-        <div class="column is-one-fifth">
+        <div class="column wbox m-1 p-4">
             <p>Date: <span id="date2"></span></p>
             <p> <span id="weather-icon2"></span></p>
             <p>Looks Like:&nbsp;<span id="descript2"></span></p>
@@ -44,7 +44,7 @@
             <p>Temperature Min: <span id="temp-min2"></span>F</p>
             <p>Wind Speed: <span id="wind2"></span>&nbsp;MPH</p>
         </div>
-        <div class="column is-one-fifth">
+        <div class="column wbox m-1 p-4">
             <p>Date: <span id="date3"></span></p>
             <p> <span id="weather-icon3"></span></p>
             <p>Looks Like:&nbsp;<span id="descript3"></span></p>
@@ -55,7 +55,7 @@
             <p>Temperature Min: <span id="temp-min3"></span>F</p>
             <p>Wind Speed: <span id="wind3"></span>&nbsp;MPH</p>
         </div>
-        <div class="column is-one-fifth">
+        <div class="column wbox m-1 p-4">
             <p>Date: <span id="date4"></span></p>
             <p> <span id="weather-icon4"></span></p>
             <p>Looks Like:&nbsp;<span id="descript4"></span></p>
@@ -66,7 +66,7 @@
             <p>Temperature Min: <span id="temp-min4"></span>F</p>
             <p>Wind Speed: <span id="wind4"></span>&nbsp;MPH</p>
         </div>
-        <div class="column is-one-fifth">
+        <div class="column wbox m-1 p-4">
             <p>Date: <span id="date5"></span></p>
             <p> <span id="weather-icon5"></span></p>
             <p>Looks Like:&nbsp;<span id="descript5"></span></p>
@@ -76,6 +76,11 @@
             <p>Temperature Max: <span id="temp-max5"></span>F</p>
             <p>Temperature Min: <span id="temp-min5"></span>F</p>
             <p>Wind Speed: <span id="wind5"></span>&nbsp;MPH</p>
+        </div>
+      </div>
+      <div class="columns m-4 p-4 is-centered hisbox">
+        <div class="column is-half" id="hisBtn">
+            
         </div>
       </div>
       <script src="./script.js"></script>
