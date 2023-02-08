@@ -5,6 +5,7 @@ let app = '&appid='
 let lim = '&limit=1'
 const searchBtn = document.getElementById('searchBtn');
 
+
 function submitSearch(event) {
   let city = searchInput = document.getElementById("searchInput").value;
   let link = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + lim + app + apiKey
@@ -228,4 +229,15 @@ function displayCityButton(cityName) {
     // handle displaying the results from the URL
   });
   document.getElementById('hisBtn').appendChild(cityButton);
+}
+
+window.onload = function() {
+  displayStoredCityButtons();
+};
+
+function displayStoredCityButtons() {
+  for (let i = 0; i < localStorage.length; i++) {
+    let city = localStorage.key(i);
+    displayCityButton(city);
+  }
 }
